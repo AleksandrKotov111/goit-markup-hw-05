@@ -469,25 +469,47 @@
         </div>
       </div>
     </footer>
-    <div class="background-overlay">
+    <div class="backdrop-overlay">
       <div class="modal">
-        <button class="modal-button" width="8" height="8">
-          <svg class="modal-button-svg" width="8" height="8">
+        <button type="button" class="modal-close" >
+          <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
-
-            <div class="modal-form-item">
-              <input class="modal-input-name modal-input" type="text"/>
-              <svg class="input-name-svg">
+          <div class="modal-form-item">
+            <label for="user-name" class="modal-input-text">Name</label>
+            <div class="modal-input-cover">
+              <input class="modal-input" name="user-name" type="text" placeholder="Enter name" required id="user-name"/>
+              <svg class="input-svg" width="12" height="12">
                 <use href="./images/icons.svg#icon-human"></use>
               </svg>
             </div>
-          <input class="modal-input-tel modal-input" type="text"/>
-          <input class="modal-input-email modal-input" type="text"/>
-          <textarea class="modal-input-comment modal-input" name="" id=""></textarea>
+          </div>
+          <div class="modal-form-item">
+            <label for="user-tel" class="modal-input-text">Phone</label>
+            <div class="modal-input-cover">
+              <input class="modal-input" name="user-tel" type="tel" placeholder="Enter phone"required id="user-tel"/>
+              <svg class="input-svg"  width="13" height="13">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-item">
+            <label for="user-email" class="modal-input-text">Email</label>
+            <div class="modal-input-cover">
+              <input class="modal-input" name="user-email" type="email" placeholder="Enter email" required id="user-email"/>
+              <svg class="input-svg" width="15" height="12">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-item modal-form-comment">
+            <label class="modal-input-text" for="user-comment">Comment</label>
+            <textarea class="modal-input-comment" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
+          </div>
+          <button class="modal-button-submit" type="submit">Send</button>
         </form>
       </div>
     </div>
